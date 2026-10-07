@@ -193,6 +193,7 @@ main
                 main
 
 Los cambios no se incorporan directamente a main hasta que hayan sido desarrollados y probados correctamente.
+
 📦 Dependencias
 Las principales dependencias del proyecto son:
 - FastAPI
@@ -212,6 +213,7 @@ Entre las funcionalidades de seguridad proyectadas se encuentran:
 - Comunicación segura mediante HTTPS.
 - Protección de información clínica.
 La implementación de estas funcionalidades se realizará durante las siguientes etapas del proyecto.
+
 ☁️ Integración con Cuidado Seguro
 El microservicio PDF está diseñado para integrarse con la arquitectura general de Cuidado Seguro.
 Arquitectura proyectada:
@@ -237,6 +239,7 @@ Arquitectura proyectada:
                                          PDF
 
 El PDF Service tendrá como responsabilidad exclusiva la generación de documentos, evitando mezclar esta lógica con los demás microservicios.
+
 📄 Funcionalidades futuras
 Se contempla ampliar el microservicio para generar:
 - [ ] Listado de pacientes.
@@ -251,6 +254,7 @@ Se contempla ampliar el microservicio para generar:
 - [ ] Integración con API Gateway.
 - [ ] Autenticación JWT.
 - [ ] Integración con frontend administrativo.
+
 👨‍💻 Proyecto
 Cuidado Seguro
 Microservicio:
@@ -279,108 +283,6 @@ Actualmente se encuentra implementado:
 - ⏳ Integración con API Gateway.
 - ⏳ Integración con frontend.
 - ⏳ Seguridad JWT.
+
 📜 Licencia
-Proyecto académico y de desarrollo perteneciente a Cuidado Seguro.
-
-### Una decisión que te recomiendo
-
-Yo **sí pondría este README ahora**, antes de continuar con el listado de pacientes. Así nuestro repositorio ya queda documentado desde el inicio y después solo vamos actualizando las secciones de **funcionalidades**, **endpoints** y **estado del proyecto**.
-
-Si quieres, en el siguiente paso podemos crear directamente este `README.md` dentro de tu proyecto y dejarlo listo para hacer el **commit en `feature/pdf-service`**.
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Esfuerzo de razonamientoGPT-5.6 Sol
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-Arrastra para reordenar los elementos de navegación anclados
-
-
-
+Proyecto académico y de desarrollo perteneciente a Cuidado Seguro
