@@ -22,6 +22,7 @@ class DatosPDF(BaseModel):
 def generar_documento_pdf(datos: DatosPDF):
 
     pdf = generar_pdf(datos.model_dump())
+    pdf.seek(0)
 
     return StreamingResponse(
         pdf,
