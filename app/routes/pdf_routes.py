@@ -1,14 +1,12 @@
 from fastapi import APIRouter
-from fastapi.responses import Response
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
+from typing import Optional
 
 from app.services.pdf_service import generar_pdf
 
 
-router = APIRouter(
-    prefix="/api/pdf",
-    tags=["PDF"]
-)
+router = APIRouter()
 
 
 class DatosPDF(BaseModel):
@@ -17,21 +15,15 @@ class DatosPDF(BaseModel):
     fecha_nacimiento: str
     tipo_documento: str
 
-
-@router.post("/generar")
-def generar_documento_pdf(datos: DatosPDF):
-
-<<<<<<< Updated upstream
+@router.post("/api/pdf/generar")
+def generar_documento(datos: DatosPDF):
     pdf = generar_pdf(datos.model_dump())
-    pdf.seek(0)
-=======
-    pdf = generar_pdf(datos.model_dump()).getvalue()
->>>>>>> Stashed changes
 
-    return Response(
+    return StreamingResponse(
         pdf,
         media_type="application/pdf",
         headers={
-            "Content-Disposition": "attachment; filename=documento_cuidado_seguro.pdf"
+            "Content-Disposition":
+                'attachment; filename="documento_cuidado_seguro.pdf"'
         }
     )
