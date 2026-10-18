@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from fastapi.responses import StreamingResponse
+from fastapi.responses import Response
 from pydantic import BaseModel
 
 from app.services.pdf_service import generar_pdf
@@ -21,10 +21,14 @@ class DatosPDF(BaseModel):
 @router.post("/generar")
 def generar_documento_pdf(datos: DatosPDF):
 
+<<<<<<< Updated upstream
     pdf = generar_pdf(datos.model_dump())
     pdf.seek(0)
+=======
+    pdf = generar_pdf(datos.model_dump()).getvalue()
+>>>>>>> Stashed changes
 
-    return StreamingResponse(
+    return Response(
         pdf,
         media_type="application/pdf",
         headers={
